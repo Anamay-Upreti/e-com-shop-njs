@@ -1,5 +1,5 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import { CheckCircledIcon } from "@radix-ui/react-icons";
+import { CheckCircledIcon, StarFilledIcon, StarIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 
 export default function Home() {
@@ -10,11 +10,10 @@ export default function Home() {
         <div className="col-span-2 px-6  lg:px-0 lg:pt-4">
           <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
             <div className="absoulte w-28 left-0 -top-20 hidden lg:block ">
-              <Image
+              <img
               src="/snake-1.png"
               className="w-full"
-              width={1}
-              height={1}
+              
               />
             </div>
             <h1 className="relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-7xl">Your Image on a <span className="bg-green-600 px-2">Custom</span> Phone Case</h1>
@@ -46,14 +45,58 @@ export default function Home() {
             </ul>
             <div className="mt-12 flex flex-col sm:flex-row items-center sm:items-start gap-5">
               <div className="flex -space-x-4">
-             <Image
+             <img
              className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
              src="/users/user-1.png"
-             alt=""
+             alt="f"
+             
              />
+             <img
+             className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
+             src="/users/user-2.png"
+             alt="f"
+             
+             />
+             <img
+             className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
+             src="/users/user-3.png"
+             alt="f"
+             
+             />
+             <img
+             className="inline-block h-10 w-10 rounded-full ring-2 ring-slate-100"
+             src="/users/user-4.jpg"
+             alt="f"
+             
+             />
+             <img
+             className="inline-block object-cover h-10 w-10 rounded-full ring-2 ring-slate-100"
+             src="/users/user-5.jpg"
+             alt="f"
+             
+             />
+              </div>
+              <div className="flex flex-col justify-between items-center sm:items-start">
+              <div className="flex gap-0.5">
+               <StarFilledIcon className="h-4 w-4 text-green-600 fill-green-600"/>
+               <StarFilledIcon className="h-4 w-4 text-green-600 fill-green-600"/>
+               <StarFilledIcon className="h-4 w-4 text-green-600 fill-green-600"/>
+               <StarFilledIcon className="h-4 w-4 text-green-600 fill-green-600"/>
+               <StarFilledIcon className="h-4 w-4 text-green-600 fill-green-600"/>
+              </div>
+
+              <p>
+                <span className="font-semibold">happy customers
+                  1.250
+                </span>
+              </p>
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="col-span-full lg:col-span-1 w-full flex justify-center">
+
         </div>
       </MaxWidthWrapper>
     </section>
