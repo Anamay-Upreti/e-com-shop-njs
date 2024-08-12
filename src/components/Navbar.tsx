@@ -78,7 +78,7 @@ const Navbar = () => {
                   className={buttonVariants({
                     size: "sm",
                     variant: "ghost",
-                    className: "hidden sm:flex items-center gap-1",
+                    className: "hidden sm:flex items-center gap-1 bg-green-600",
                   })}
                 >
                   Create Case
