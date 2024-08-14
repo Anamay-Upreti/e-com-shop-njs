@@ -137,8 +137,47 @@ export default function Home() {
               </div>
               <div className="text-lg leading-4">
                 <p>
-                  "The case feels durable and I even got a compliment on the design. had the case for two and a half months now and <span className="p-0.5 bg-slate-800 text-white"> The image is super clear</span>, on the case I had before, the image started fading into yellow-ish color after a couple of weeks. Love it."
+                  "The case feels durable and I even got a compliment on the design. had the case for two and a half months now and {' '}<span className=" bg-slate-800 text-white"> The image is super clear</span>, on the case I had before, the image started fading into yellow-ish color after a couple of weeks. Love it."
                 </p>
+              </div>
+              <div className="flex gap-4 mt-2">
+                <img className="rounded-full h-12 w-12 object-cover" src="/users/user-1.png" alt="user" />
+                <div className="flex flex-col">
+                  <p className="font-semibold">Jonathan</p>
+                  <div className="flex gap-1.5 items-center text-zinc-600">
+                    <CheckCircledIcon className="h-4 w-4 strke-[3px] text-green-600"/>
+                    <p className="text-sm">Verified Purchase</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+           {/* second user */}
+
+            <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20">
+              <div className="flex gap-0.5 mb-2">
+                <Star className="h-5 w-5 text-green-600 fill-green-600"/>
+                <Star className="h-5 w-5 text-green-600 fill-green-600"/>
+                <Star className="h-5 w-5 text-green-600 fill-green-600"/>
+                <Star className="h-5 w-5 text-green-600 fill-green-600"/>
+                <Star className="h-5 w-5 text-green-600 fill-green-600"/>
+              </div>
+              <div className="text-lg leading-4">
+                <p>
+                  "I usually keep my phone togerther with my keys in my pocket and that led to some pretty heavy scratchmarks on all of my last phone cases. This one, besides a barely noticeable scratch on the corner {' '} <span className="bg-slate-800 text-white"> Looks brand new after about after a about half an year</span>, I dig it."
+                </p>
+              </div>
+              <div className="flex gap-4 mt-2">
+                <img className="rounded-full h-12 w-12 object-cover" src="/users/user-4.jpg" alt="user" />
+                <div className="flex flex-col">
+                  <p className="font-semibold">Amreesh</p>
+                  <div className="flex gap-1.5 items-center text-zinc-600">
+                    <CheckCircledIcon className="h-4 w-4 strke-[3px] text-green-600"/>
+                    <p className="text-sm">Verified Purchase</p>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
