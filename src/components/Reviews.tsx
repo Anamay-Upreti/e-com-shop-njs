@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef, useState } from "react";
+import { HTMLAttributes, useEffect, useRef, useState } from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -55,9 +55,27 @@ function ReviewColumn({
       }
   }, [])
 
-  return <div ref={columnRef} className={cn("animate-marquee space-y-8 py-4, ", className)}
+return <div ref={columnRef} className={cn("animate-marquee space-y-8 py-4, ", className)}
   style={{'--marquee-duration': duration} as React.CSSProperties}
-  ></div>
+  >
+    {reviews.concat(reviews).map((imgSrc, reviewIndex) => (
+      <Review />
+    ))}
+  </div>
+}
+
+interface ReviewProps extends HTMLAttributes<HTMLDivElement> {
+  imgSrc: string
+}
+
+function Review({imgSrc, className, ...props}: ReviewProps){
+
+const POSSIBLE_ANIMATION_DELAYS = ["0s", "0,1s", "0.2s", "0.3s", "0.4s", "0.5s"]
+
+ const animationDelay = POSSIBLE_ANIMATION_DELAYS[Math.floor(Math.random () * POSSIBLE_ANIMATION_DELAYS.length)]
+
+
+  return <div className={cn('animate-fade-in rounded-[2.25rem] p-6 opacity-0 shadow-xl shadow-slate-900/5', className)} { ...props} aria-busy></div>
 }
 
 function ReviewGrid() {
