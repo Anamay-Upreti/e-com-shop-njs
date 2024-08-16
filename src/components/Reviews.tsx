@@ -25,15 +25,34 @@ function splitArray <T>(array: Array<T>, numParts: number) {
    return result
 }
 
+function ReviewColumn({
+  reviews,
+  className,
+  reviewClassName,
+  msPerPixel = 0
+
+}: {
+  reviews: string[]
+  className?: string
+  reviewClassName?: (reviewIndex: number) => string 
+  msPerPixel?: number
+}){
+
+}
+
 function ReviewGrid() {
   const containerRef = useRef<HTMLDivElement | null>(null)
    const inInView = useInView(containerRef, {once: true, amount: 0.4 })
   const columns = splitArray(PHONES, 3)
-
+  const column1 = columns[0]
+  const column2 = columns[1]
+  const column3 = splitArray(columns[2], 2)
   
   return( 
   <div ref={containerRef} className="relative -mx-4 mt-16 grid h-[49rem] max-h-[150vh] grid-cols-1 items-start gap-8 overflow-hidden px-4 sm:mt-20 md:grid-cols-3 ">
-
+ {inInView ? <>
+  <ReviewColumn />
+ </>  : null }
   </div>
   )
 }
