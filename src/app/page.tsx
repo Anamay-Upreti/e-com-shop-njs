@@ -9,8 +9,9 @@ import {
   StarFilledIcon,
   StarIcon,
 } from "@radix-ui/react-icons";
-import {  Check, Link, Star } from "lucide-react";
+import {  ArrowRight, Check,  Star } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -231,12 +232,13 @@ export default function Home() {
                 </li>
                 <li className="w-fit">
                   <Check className="h-5 w-5 text-green-600 inline mr-1.5"/>
-                  y year print warranty
+                  5 years print warranty
                 </li>
 
                 <div className="flex justify-center">
                   <Link className={buttonVariants({
-                    size: 'lg'
+                    size: 'lg',
+                    className: "mx-auto mt-8"
                   })} href="/configure/upload">
                   Create Your Own Case Now! <ArrowRight className="h-4 w-4 ml-1.5"/>
                   </Link>
