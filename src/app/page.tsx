@@ -2,13 +2,14 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Phone from "@/components/Phone";
 import Reviews from "@/components/Reviews";
+import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "@/components/ui/Icons";
 import {
   CheckCircledIcon,
   StarFilledIcon,
   StarIcon,
 } from "@radix-ui/react-icons";
-import { Star } from "lucide-react";
+import {  Check, Link, Star } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -215,6 +216,33 @@ export default function Home() {
                   <Phone className="w-60 "  imgSrc="/horse_phone.jpg"/>
                 </div>
               </div>
+              <ul className="mx-auto mt-12 max-w-prose sm:text-lg space-y-2 w-fit">
+                <li className="w-fit">
+                  <Check className="h-5 w-5 text-green-600 inline mr-1.5"/>
+                  High-quality silicone material
+                </li>
+                <li className="w-fit">
+                  <Check className="h-5 w-5 text-green-600 inline mr-1.5"/>
+                  Scratch- and fingerprint resistant coating 
+                </li>
+                <li className="w-fit">
+                  <Check className="h-5 w-5 text-green-600 inline mr-1.5"/>
+                  Wireless charging compatible
+                </li>
+                <li className="w-fit">
+                  <Check className="h-5 w-5 text-green-600 inline mr-1.5"/>
+                  y year print warranty
+                </li>
+
+                <div className="flex justify-center">
+                  <Link className={buttonVariants({
+                    size: 'lg'
+                  })} href="/configure/upload">
+                  Create Your Own Case Now! <ArrowRight className="h-4 w-4 ml-1.5"/>
+                  </Link>
+
+                </div>
+              </ul>
         </MaxWidthWrapper>
       </section>
     </div>
